@@ -1,0 +1,12 @@
+<div id="header">
+  <div id="banner">
+    <img src="assets/images/banner.jpg">
+  </div>
+  <div id="nav">
+    <ul>
+    {% for item in site.data.navigation %}
+      <li><a href="{{ item.link }}">{{ item.name }}</a></li>
+    {% endfor %}
+    </ul>
+  </div>
+</div>

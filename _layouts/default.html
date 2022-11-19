@@ -1,0 +1,29 @@
+<html>
+
+{% include head.html %}
+
+  <body>
+{% include header.html %}
+
+    <div id="main">
+      <div id="links">
+      {% if site.data.links.header %}
+        <p>{{ site.data.links.header }}</p>
+      {% endif %}
+        <ul>
+        {% for item in site.data.links.links %}
+          <li><a href="{{ item.link }}">{{ item.name }}</a></li>
+        {% endfor %}
+        </ul>
+      </div>
+      <div id="content">
+
+{{ content }}
+
+      </div>
+    </div>
+
+{% include footer.html %}
+  </body>
+
+</html>
