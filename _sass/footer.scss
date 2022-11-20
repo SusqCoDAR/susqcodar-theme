@@ -1,0 +1,27 @@
+@import "theme.scss";
+
+#footer {
+  font-size: 0.75rem;
+  text-align: center;
+  background-color: $footer-background-color;
+  color: $footer-color;
+  padding: 20px 20px;
+  clear: right;
+}
+
+#footer a {
+  color: $footer-color;
+}
+
+#footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+#footer #info {
+  width: auto;
+}
+
+#footer #branding {
+  margin: 0px 20px;
+}
