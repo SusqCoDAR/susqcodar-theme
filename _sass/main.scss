@@ -85,6 +85,19 @@
   color: white;
 }
 
+#footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+#footer #info {
+  width: auto;
+}
+
+#footer #branding {
+  margin: 0px 20px;
+}
+
 form label {
   font-size: 1.25rem;
 }
