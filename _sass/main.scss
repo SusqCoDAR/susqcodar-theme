@@ -16,6 +16,10 @@
   float: left;
 }
 
+#nav li.current {
+  background-color: #444;
+}
+
 #nav li a {
   display: block;
   color: white;
