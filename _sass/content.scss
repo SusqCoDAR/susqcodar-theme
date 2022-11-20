@@ -47,3 +47,26 @@ form input, textarea {
   display: block;
   margin: 10px;
 }
+
+$grey-color-light: #828282;
+table.fancy-table {
+  color: lighten(black, 18%);
+  border-collapse: collapse;
+  border: 1px solid ;
+  th, td {
+    padding: 5 5;
+  }
+  tr {
+    &:nth-child(even) {
+      background-color: lighten($grey-color-light, 40%);
+    }
+  }
+  th {
+    background-color: lighten($grey-color-light, 20%);
+    border: 1px solid darken($grey-color-light, 4%);
+    border-bottom-color: darken($grey-color-light, 12%);
+  }
+  td {
+    border: 1px solid $grey-color-light;
+  }
+}
