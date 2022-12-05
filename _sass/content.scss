@@ -1,4 +1,4 @@
-@import "colors.scss";
+@import "theme.scss";
 
 #links {
   overflow: hidden;
@@ -62,25 +62,22 @@ form input, textarea {
   margin-right: auto;
 }
 
-$grey-color-light: #828282;
-table {
-  color: lighten(black, 18%);
+table, th, td {
+  border: 1px solid $table-border-color;
   border-collapse: collapse;
-  border: 1px solid ;
+}
+table {
+  color: $table-text-color;
   th, td {
     padding: 5 5;
   }
   tr {
     &:nth-child(even) {
-      background-color: lighten($grey-color-light, 40%);
+      background-color: $table-alt-row-color;
     }
   }
   th {
-    background-color: lighten($grey-color-light, 20%);
-    border: 1px solid darken($grey-color-light, 4%);
-    border-bottom-color: darken($grey-color-light, 12%);
-  }
-  td {
-    border: 1px solid $grey-color-light;
+    background-color: $table-header-color;
+    border-bottom-color: $table-divider-color;
   }
 }

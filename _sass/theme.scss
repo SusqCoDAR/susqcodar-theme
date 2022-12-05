@@ -1,4 +1,11 @@
 @import "colors.scss";
 
-$footer-background-color: $dar-blue;
-$footer-color:            white;
+$footer-background-color:   $dar-blue;
+$footer-color:              white;
+
+$table-base-color:          black;
+$table-text-color:          lighten($table-base-color, 20%);
+$table-divider-color:       lighten($table-base-color, 40%);
+$table-border-color:        lighten($table-base-color, 50%);
+$table-header-color:        lighten($table-base-color, 70%);
+$table-alt-row-color:       lighten($table-base-color, 90%);
