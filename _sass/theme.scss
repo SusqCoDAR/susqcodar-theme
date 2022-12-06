@@ -9,3 +9,14 @@ $table-divider-color:       lighten($table-base-color, 40%);
 $table-border-color:        lighten($table-base-color, 50%);
 $table-header-color:        lighten($table-base-color, 70%);
 $table-alt-row-color:       lighten($table-base-color, 90%);
+
+$nav-text-color:            white;
+$nav-base-color:            black;
+$nav-background-color:      lighten($nav-base-color, 20%);
+$nav-current-color:         lighten($nav-base-color, 25%);
+$nav-hover-color:           lighten($nav-base-color, 6%);
+
+$links-text-color:          white;
+$links-base-color:          black;
+$links-background-color:    lighten($links-base-color, 20%);
+$links-hover-color:         lighten($links-base-color, 6%);

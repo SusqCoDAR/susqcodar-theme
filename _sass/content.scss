@@ -4,9 +4,9 @@
   overflow: hidden;
   width: fit-content;
   float: right;
-  background-color: #333;
+  background-color: $links-background-color;
   text-align: center;
-  color: white;
+  color: $links-text-color;
 }
 
 #links p {
@@ -23,12 +23,12 @@
 #links li a {
   display: block;
   padding: 14px 16px;
-  color: white;
+  color: $links-text-color;
   text-decoration: none;
 }
 
 #links li a:hover {
-  background-color: #111;
+  background-color: $links-hover-color;
 }
 
 #content {
