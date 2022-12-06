@@ -12,7 +12,7 @@
   
     {% if page.date %}
     <div id="updated">
-      <p>Updated: {{ page.date }}</p>
+      <p>Updated: {{ page.date | date: "%m/%d/%Y" }}</p>
     </div>
     {% endif %}
   </div>
