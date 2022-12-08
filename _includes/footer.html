@@ -10,9 +10,9 @@
     </div>
     {% endif %}
   
-    {% if page.date %}
+    {% if page.last_modified_at %}
     <div id="updated">
-      <p>Updated: {{ page.date | date: "%m/%d/%Y" }}</p>
+      <p>Updated: {{ page.last_modified_at | date: "%m/%d/%Y" }}</p>
     </div>
     {% endif %}
   </div>
