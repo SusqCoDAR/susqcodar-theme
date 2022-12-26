@@ -1,22 +1,22 @@
 @import "colors.scss";
 
-$footer-background-color:   $dar-blue;
-$footer-color:              white;
+$footer-background-color:   $dar-blue !default;
+$footer-color:              white !default;
 
-$table-base-color:          black;
-$table-text-color:          lighten($table-base-color, 20%);
-$table-divider-color:       lighten($table-base-color, 40%);
-$table-border-color:        lighten($table-base-color, 50%);
-$table-header-color:        lighten($table-base-color, 70%);
-$table-alt-row-color:       lighten($table-base-color, 90%);
+$table-base-color:          black !default;
+$table-text-color:          lighten($table-base-color, 20%) !default;
+$table-divider-color:       lighten($table-base-color, 40%) !default;
+$table-border-color:        lighten($table-base-color, 50%) !default;
+$table-header-color:        lighten($table-base-color, 70%) !default;
+$table-alt-row-color:       lighten($table-base-color, 90%) !default;
 
-$nav-text-color:            white;
-$nav-base-color:            black;
-$nav-background-color:      lighten($nav-base-color, 20%);
-$nav-current-color:         lighten($nav-base-color, 25%);
-$nav-hover-color:           lighten($nav-base-color, 6%);
+$nav-text-color:            white !default;
+$nav-base-color:            $dar-red !default;
+$nav-background-color:      $nav-base-color !default;
+$nav-current-color:         lighten($nav-base-color, 5%) !default;
+$nav-hover-color:           darken($nav-base-color, 5%) !default;
 
-$links-text-color:          white;
-$links-base-color:          black;
-$links-background-color:    lighten($links-base-color, 20%);
-$links-hover-color:         lighten($links-base-color, 6%);
+$links-text-color:          white !default;
+$links-base-color:          $dar-blue !default;
+$links-background-color:    $links-base-color !default;
+$links-hover-color:         darken($links-base-color, 5%) !default;
