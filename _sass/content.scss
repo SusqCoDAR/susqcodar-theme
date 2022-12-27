@@ -80,3 +80,29 @@ table {
     border-bottom-color: $table-divider-color;
   }
 }
+
+#post-links {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+
+  li {
+    display: inline-flex;
+  }
+
+  li#previous {
+    margin-right: auto;
+    :before {
+      content: "\2190";
+    }
+  }
+
+  li#next {
+    margin-left: auto;
+    :after {
+      content: "\2192";
+    }
+  }
+}
+
