@@ -81,6 +81,16 @@ table {
   }
 }
 
+#content {
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
 #post-links {
   list-style-type: none;
   display: flex;
@@ -89,6 +99,7 @@ table {
 
   li {
     display: inline-flex;
+
   }
 
   li#previous {
