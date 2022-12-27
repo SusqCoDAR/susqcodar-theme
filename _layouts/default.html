@@ -17,6 +17,9 @@
         </ul>
       </div>
       <div id="content">
+      {% if page.title_heading and page.title %}
+        <h1>{{ page.title | escape }}</h1>
+      {% endif %}
 
 {{ content }}
 
