@@ -1,0 +1,34 @@
+<div class="sidebar">
+{% assign openyear = page.date | date: "%Y" %}
+{% for item in include.collection %}
+  {% assign currentyear = item.date | date: "%Y" %}
+  {% if openyear == nil %}
+    {% assign openyear = currentyear %}
+  {% endif %}
+  {% if currentyear != previousyear %}
+    {% unless forloop.first %}
+  </ul>
+    {% endunless %}
+  {% assign active = "" %}
+  {% if currentyear == openyear %}
+    {% assign active = " active" %}
+  {% endif %}
+  <div class="accordian{{ active }}">{{ currentyear }}{{ include.header_suffix }}</div>
+  <ul class="panel{{ active }}">
+    {% assign previousyear = currentyear %}
+  {% endif %}
+  <li{% if item.url == page.url %} class="current"{% endif %}><a href="{{ item.url }}">{{ item.title }}</a></li>
+  {% if forloop.last %}
+  </ul>
+  {% endif %}
+{% endfor %}
+  <script language="javascript">
+    var buttons = document.getElementsByClassName("accordian");
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("active");
+      });
+    }
+  </script>
+</div>

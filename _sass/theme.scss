@@ -20,3 +20,10 @@ $links-text-color:          white !default;
 $links-base-color:          $dar-blue !default;
 $links-background-color:    $links-base-color !default;
 $links-hover-color:         darken($links-base-color, 5%) !default;
+
+$posts-nav-year-background-color: $dar-purple !default;
+$posts-nav-year-text-color: white !default;
+$posts-nav-post-background-color: $dar-teal !default;
+$posts-nav-post-text-color: white !default;
+$posts-nav-current-background-color: lighten($dar-teal, 5%) !default;
+$posts-nav-current-text-color: white !default;
