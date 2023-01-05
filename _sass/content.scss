@@ -7,11 +7,13 @@
   background-color: $links-background-color;
   text-align: center;
   color: $links-text-color;
+  font-size: 0.75rem;
 }
 
 #links p {
   font-size: 1.25rem;
   font-weight: bold;
+  margin: 0.5rem;
 }
 
 #links ul {
@@ -22,7 +24,7 @@
 
 #links li a {
   display: block;
-  padding: 14px 16px;
+  padding: 0.5rem 1rem;
   color: $links-text-color;
   text-decoration: none;
 }
