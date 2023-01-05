@@ -184,6 +184,18 @@ table {
   }
 }
 
+ul.posts {
+  list-style-type: none;
+  .post-title {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+  .post-date {
+    color: grey;
+    margin: 0;
+  }
+}
+
 .post-content {
   padding-left: 10rem;
 }
