@@ -1,0 +1,11 @@
+title: DAR Jekyll Theme
+description: Custom Jekyll theme for use on DAR Sites
+webmaster: webmaster@susquehannacountydar.org
+plugins:
+  - jekyll-sitemap
+defaults:
+  -
+    scope:
+      type: "posts"
+    values:
+      category: "posts"

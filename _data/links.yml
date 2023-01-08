@@ -1,0 +1,13 @@
+header: Link Box
+links:
+ - name: Suquehanna County DAR Page
+   link: https://www.susquehannacountydar.org
+
+ - name: Jekyll Documentation
+   link: https://jekyllrb.com/docs/
+
+ - name: Liquid Documentation
+   link: https://shopify.github.io/liquid/
+
+ - name: Theme Github Repo
+   link: https://github.com/SusqCoDAR/susqcodar-theme

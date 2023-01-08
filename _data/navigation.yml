@@ -1,0 +1,17 @@
+ - name: Home
+   link: /
+
+ - name: Posts
+   link: /posts.html
+
+ - name: One Fish
+   link: /one.html
+
+ - name: Two Fish
+   link: /two.html
+
+ - name: Red Fish
+   link: /red.html
+
+ - name: Blue Fish
+   link: /blue.html
