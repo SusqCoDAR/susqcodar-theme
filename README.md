@@ -1,50 +1,27 @@
-# dar
+# DAR Site Jekyll Theme
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
-
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
-
-TODO: Delete this and the text above, and describe your gem
-
+This Jekyll theme was developed for use as a remote theme for Github Pages sites using Jekyll.
 
 ## Installation
 
-Add this line to your Jekyll site's `Gemfile`:
+Add the following line to your `_config.yml` file:
 
-```ruby
-gem "dar"
 ```
-
-And add this line to your Jekyll site's `_config.yml`:
-
-```yaml
-theme: dar
+remote_theme: SusqCoDAR/susqcodar-theme@main
 ```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install dar
 
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Feel free to provide bug reports or pull requests against this repository. However, do note that the primary motivation for this theme is for the Susquehanna County chapter of the DAR. While attempts have been made for it to be useable by any chapter site, it must continue to work for this one particular site.
+
+This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Development
 
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `dar.gemspec` accordingly.
+The `main` branch of this repo is intended for use by real sites, while the `dev` branch is intended for experimental changes before promoting them to `main`.
 
 ## License
 
