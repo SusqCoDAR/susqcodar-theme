@@ -1,7 +1,11 @@
 ---
 layout: default
 ---
-  {% include sidebar.html collection=site.posts header_suffix=" Activities" %}
+{% assign suffix = " Posts" %}
+{% if page.sidebar_suffix %}
+  {% assign suffix = page.sidebar_suffix %}
+{% endif %}
+{% include sidebar.html collection=site.posts header_suffix=suffix %}
   <div class="post-content">
     <h1>{{ page.title }}</h1>
 
