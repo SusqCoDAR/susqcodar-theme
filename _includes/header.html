@@ -1,4 +1,9 @@
 <header id="header">
+  {% if site.banner-text %}
+  <div id="banner-text">
+    <p>{{ site.banner-text }}</p>
+  </div>
+  {% endif %}
   <div id="banner">
     <img src="/assets/images/banner.jpg" alt="Site banner image">
   </div>
