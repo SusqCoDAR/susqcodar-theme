@@ -1,6 +1,7 @@
 title: DAR Jekyll Theme
 description: Custom Jekyll theme for use on DAR Sites
 banner-text: Example text at the top
+banner-credit: "The amazing photo by: Hue Mann"
 webmaster: webmaster@susquehannacountydar.org
 plugins:
   - jekyll-sitemap
