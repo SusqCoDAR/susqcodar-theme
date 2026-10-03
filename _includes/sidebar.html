@@ -17,7 +17,7 @@
   <ul class="panel{{ active }}">
     {% assign previousyear = currentyear %}
   {% endif %}
-  <li{% if item.url == page.url %} class="current"{% endif %}><a href="{{ item.url }}">{{ item.title }}</a></li>
+  <li{% if item.url == page.url %} class="current"{% endif %}><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
   {% if forloop.last %}
   </ul>
   {% endif %}

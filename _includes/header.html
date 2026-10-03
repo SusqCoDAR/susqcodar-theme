@@ -5,12 +5,12 @@
   </div>
   {% endif %}
   <div id="banner">
-    <img src="/assets/images/banner.jpg" alt="Site banner image">
+    <img src="{{ '/assets/images/banner.jpg' | relative_url }}" alt="Site banner image">
   </div>
   <div id="nav">
     <ul>
     {% for item in site.data.navigation %}
-      <li{% if item.link == page.url %} class="current"{% endif %}><a href="{{ item.link }}">{{ item.name }}</a></li>
+      <li{% if item.link == page.url %} class="current"{% endif %}><a href="{{ item.link | relative_url }}">{{ item.name }}</a></li>
     {% endfor %}
     </ul>
   </div>
