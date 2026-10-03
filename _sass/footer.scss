@@ -7,19 +7,12 @@
   color: $footer-color;
   padding: 20px 20px;
   clear: right;
-}
-
-#footer a {
-  color: $footer-color;
-}
-
-#footer {
   display: flex;
   justify-content: space-around;
 }
 
-#footer #info {
-  width: auto;
+#footer a {
+  color: $footer-color;
 }
 
 #footer #branding {
