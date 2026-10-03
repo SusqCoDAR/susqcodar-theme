@@ -1,4 +1,4 @@
-<div class="sidebar">
+<nav class="sidebar" aria-label="Posts by year">
 {% assign openyear = page.date | date: "%Y" %}
 {% for item in include.collection %}
   {% assign currentyear = item.date | date: "%Y" %}
@@ -7,28 +7,19 @@
   {% endif %}
   {% if currentyear != previousyear %}
     {% unless forloop.first %}
-  </ul>
+    </ul>
+  </div>
     {% endunless %}
-  {% assign active = "" %}
-  {% if currentyear == openyear %}
-    {% assign active = " active" %}
-  {% endif %}
-  <div class="accordian{{ active }}">{{ currentyear }}{{ include.header_suffix }}</div>
-  <ul class="panel{{ active }}">
+  <div class="accordian-group">
+    <input type="checkbox" id="year-{{ currentyear }}" class="year-toggle"{% if currentyear == openyear %} checked{% endif %} aria-controls="panel-{{ currentyear }}" aria-label="Toggle {{ currentyear }}{{ include.header_suffix }}">
+    <label for="year-{{ currentyear }}" class="accordian">{{ currentyear }}{{ include.header_suffix }}</label>
+    <ul class="panel" id="panel-{{ currentyear }}">
     {% assign previousyear = currentyear %}
   {% endif %}
-  <li{% if item.url == page.url %} class="current"{% endif %}><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+  <li{% if item.url == page.url %} class="current"{% endif %}><a href="{{ item.url | relative_url }}"{% if item.url == page.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
   {% if forloop.last %}
-  </ul>
+    </ul>
+  </div>
   {% endif %}
 {% endfor %}
-  <script>
-    var buttons = document.getElementsByClassName("accordian");
-    for (var i = 0; i < buttons.length; i++) {
-      buttons[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        this.nextElementSibling.classList.toggle("active");
-      });
-    }
-  </script>
-</div>
+</nav>

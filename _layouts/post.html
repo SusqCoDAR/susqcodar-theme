@@ -6,17 +6,19 @@ layout: default
   {% assign suffix = page.sidebar_suffix %}
 {% endif %}
 {% include sidebar.html collection=site.posts header_suffix=suffix %}
-  <div class="post-content">
+  <article class="post-content">
     <h1>{{ page.title }}</h1>
 
 {{ content }}
 
-    <ul id="post-links">
-      {%- if page.previous -%}
-      <li id="previous"><a href="{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a></li>
-      {%- endif -%}
-      {%- if page.next -%}
-      <li id="next"><a href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a></li>
-      {%- endif -%}
-    </ul>
-  </div>
+    <nav aria-label="Post navigation">
+      <ul id="post-links">
+        {%- if page.previous -%}
+        <li id="previous"><a href="{{ page.previous.url | relative_url }}" rel="prev">{{ page.previous.title }}</a></li>
+        {%- endif -%}
+        {%- if page.next -%}
+        <li id="next"><a href="{{ page.next.url | relative_url }}" rel="next">{{ page.next.title }}</a></li>
+        {%- endif -%}
+      </ul>
+    </nav>
+  </article>

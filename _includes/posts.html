@@ -1,15 +1,17 @@
 <ul class="posts">
   {%- for post in site.posts -%}
   <li>
-    <p class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></p>
-    <p class="post-date">{{ post.date | date: "%b %-d, %Y" }}</p>
-    <div class="post-body">
-      {% if post.excerpt_separator %}
-        {{ post.excerpt }}
-      {% else %}
-        {{ post.content }}
-      {% endif %}
-    </div>
+    <article>
+      <h2 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+      <p class="post-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time></p>
+      <div class="post-body">
+        {% if post.excerpt_separator %}
+          {{ post.excerpt }}
+        {% else %}
+          {{ post.content }}
+        {% endif %}
+      </div>
+    </article>
   </li>
   {%- endfor -%}
 </ul>

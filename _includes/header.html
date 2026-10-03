@@ -8,9 +8,18 @@
     <img src="{{ '/assets/images/banner.jpg' | relative_url }}" alt="Site banner image">
   </div>
   <nav aria-label="Main Navigation">
-    <ul>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle Navigation Menu" aria-controls="nav-menu">
+    <label for="nav-toggle" class="nav-button">
+      <span class="nav-label">Menu</span>
+      <span class="nav-icon" aria-hidden="true"></span>
+    </label>
+    <ul class="nav-menu" id="nav-menu">
     {% for item in site.data.navigation %}
-      <li{% if item.link == page.url %} class="current"{% endif %}><a href="{{ item.link | relative_url }}">{{ item.name }}</a></li>
+      {% assign is_current = false %}
+      {% if item.link == page.url or page.url == '/index.html' and item.link == '/' %}
+        {% assign is_current = true %}
+      {% endif %}
+      <li{% if is_current %} class="current"{% endif %}><a href="{{ item.link | relative_url }}"{% if is_current %} aria-current="page"{% endif %}>{{ item.name }}</a></li>
     {% endfor %}
     </ul>
   </nav>

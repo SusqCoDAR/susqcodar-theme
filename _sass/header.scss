@@ -2,12 +2,15 @@
 
 #banner-text p {
   text-align: center;
+  font-family: $heading-font-family;
   color: $banner-text-color;
   background-color: $banner-text-background-color;
   margin: 0;
-  padding: 5px;
+  padding: 8px 12px;
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
 }
 
 #banner {
@@ -20,34 +23,165 @@
 
 #banner img {
   width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
 header nav {
-  ul {
+  background-color: $nav-background-color;
+  border-bottom: 2px solid darken($nav-base-color, 8%);
+
+  .nav-toggle,
+  .nav-button {
+    display: none;
+  }
+
+  .nav-menu {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: $nav-background-color;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    max-width: 1180px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
   }
 
   li {
-    float: left;
+    margin: 0;
 
     &.current {
       background-color: $nav-current-color;
     }
+  }
 
-    a {
-      display: block;
+  a {
+    display: block;
+    font-family: $heading-font-family;
+    color: $nav-text-color;
+    text-align: center;
+    padding: 13px 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    transition: background-color 0.15s ease;
+
+    &:hover {
+      background-color: $nav-hover-color;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #ffffff;
+      outline-offset: -2px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #banner-text p {
+    font-size: 1.1rem;
+    padding: 6px 10px;
+  }
+
+  header nav {
+    .nav-toggle {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .nav-button {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 12px 1rem;
+      max-width: 1180px;
+      margin: 0 auto;
+      box-sizing: border-box;
       color: $nav-text-color;
-      text-align: center;
-      padding: 16px 16px;
-      text-decoration: none;
+      font-family: $heading-font-family;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
+      cursor: pointer;
+      user-select: none;
+      transition: background-color 0.15s ease;
 
       &:hover {
-        background-color: $nav-hover-color;
+        background-color: darken($nav-base-color, 4%);
+      }
+
+      &:focus-visible {
+        outline: 2px solid #ffffff;
+        outline-offset: -2px;
+      }
+
+      .nav-label {
+        letter-spacing: 0.08em;
+      }
+
+      .nav-icon {
+        font-size: 1.25rem;
+        line-height: 1;
+
+        &::before {
+          content: "\2630";
+        }
+      }
+    }
+
+    .nav-toggle:focus-visible + .nav-button {
+      outline: 2px solid #ffffff;
+      outline-offset: -2px;
+    }
+
+    .nav-menu {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+      li {
+        flex-shrink: 0;
+        width: 100%;
+        border-top: 1px solid darken($nav-base-color, 8%);
+
+        &.current {
+          background-color: darken($nav-base-color, 6%);
+          border-left: 4px solid white;
+        }
+      }
+
+      a {
+        padding: 14px 1rem;
+        font-size: 0.95rem;
+        text-align: left;
+        white-space: nowrap;
+
+        &:focus-visible {
+          outline: 2px solid #ffffff;
+          outline-offset: -2px;
+        }
+      }
+    }
+
+    .nav-toggle:checked ~ .nav-menu {
+      max-height: 330px;
+    }
+
+    .nav-toggle:checked ~ .nav-button {
+      background-color: darken($nav-base-color, 6%);
+
+      .nav-icon::before {
+        content: "\2715";
       }
     }
   }

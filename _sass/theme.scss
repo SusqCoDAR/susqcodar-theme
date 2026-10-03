@@ -1,5 +1,11 @@
 @import "colors.scss";
 
+$body-font-family:    Georgia, "Minion Pro", Cambria, "Times New Roman", Times, serif !default;
+$heading-font-family: Georgia, "Minion Pro", Cambria, "Times New Roman", Times, serif !default;
+$body-text-color:     #2c2c2c !default;
+$heading-text-color:  #1b2738 !default;
+$body-line-height:    1.7 !default;
+
 $banner-text-background-color: $dar-blue !default;
 $banner-text-color:            white !default;
 
