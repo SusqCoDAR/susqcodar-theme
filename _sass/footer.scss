@@ -1,6 +1,6 @@
 @import "theme.scss";
 
-#footer {
+footer {
   font-size: 0.75rem;
   text-align: center;
   background-color: $footer-background-color;
@@ -9,19 +9,19 @@
   clear: right;
   display: flex;
   justify-content: space-around;
-}
 
-#footer a {
-  color: $footer-color;
-}
+  a {
+    color: $footer-color;
+  }
 
-#footer #branding {
-  display: flex;
-  align-items: center;
-  margin: 0px 20px;
-  max-width: 33%;
+  #branding {
+    display: flex;
+    align-items: center;
+    margin: 0px 20px;
+    max-width: 33%;
 
-  img {
-    max-width: 100%;
+    img {
+      max-width: 100%;
+    }
   }
 }

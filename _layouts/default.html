@@ -6,8 +6,8 @@
   <body>
 {% include header.html %}
 
-    <div id="main">
-      <div id="links">
+    <main>
+      <aside id="links" aria-label="Additional Links">
       {% if site.data.links.header %}
         <p>{{ site.data.links.header }}</p>
       {% endif %}
@@ -16,7 +16,7 @@
           <li><a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a></li>
         {% endfor %}
         </ul>
-      </div>
+      </aside>
       <div id="content">
       {% if page.title_heading and page.title %}
         <h1>{{ page.title | escape }}</h1>
@@ -25,7 +25,7 @@
 {{ content }}
 
       </div>
-    </div>
+    </main>
 
 {% include footer.html %}
   </body>

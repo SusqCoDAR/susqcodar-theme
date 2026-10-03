@@ -1,4 +1,4 @@
-<header id="header">
+<header>
   {% if site.banner-text %}
   <div id="banner-text">
     <p>{{ site.banner-text }}</p>
@@ -7,11 +7,11 @@
   <div id="banner">
     <img src="{{ '/assets/images/banner.jpg' | relative_url }}" alt="Site banner image">
   </div>
-  <div id="nav">
+  <nav aria-label="Main Navigation">
     <ul>
     {% for item in site.data.navigation %}
       <li{% if item.link == page.url %} class="current"{% endif %}><a href="{{ item.link | relative_url }}">{{ item.name }}</a></li>
     {% endfor %}
     </ul>
-  </div>
+  </nav>
 </header>
