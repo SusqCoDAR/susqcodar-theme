@@ -12,6 +12,18 @@ remote_theme: SusqCoDAR/susqcodar-theme@main
 
 ## Usage
 
+Configure the theme in your site's `_config.yml`:
+
+```yaml
+remote_theme: SusqCoDAR/susqcodar-theme@main
+
+title: Your Chapter Name
+description: Your chapter description
+banner-text: Text displayed above the banner
+banner-credit: "Photo credit for banner"
+webmaster: webmaster@example.org
+google_analytics: G-XXXXXXXXXX # Optional Google Analytics measurement ID
+```
 
 ## Contributing
 
